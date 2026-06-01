@@ -19,9 +19,9 @@ A desktop application that helps you split your money across multiple accounts (
 ---
 ## How to Run
 
-1. Download or clone this repository from GitHub
-2. Open the `dist` folder
-3. Double click on `Paycheck Splitter.exe` to launch the app
+1. Go to [Releases](https://github.com/azhang175/Paycheck_Splitter/releases/tag/v1.0.0)
+2. Download the lastest 'Paycheck Splitter.exe'
+3. Double-click to launch the app
 
 ---
 ## How to Use
