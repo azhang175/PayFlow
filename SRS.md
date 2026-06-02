@@ -1,11 +1,11 @@
 
 ## Introduction
 
-Paycheck Splitter is a desktop application designed to automate the manual process of dividing a paycheck across multiple accounts. Instead of recalculating with a calculator each time, the user can define their accounts once, assign each a fixed dollar amount or a percentage, and instantly see how their paycheck is split. The application was built for personal use to save time and reduce errors in day-to-day money management.
+BugetFlow is a desktop application designed to automate the manual process of dividing a paycheck across multiple accounts. Instead of recalculating with a calculator each time, the user can define their accounts once, assign each a fixed dollar amount or a percentage, and instantly see how their paycheck is split. The application was built for personal use to save time and reduce errors in day-to-day money management.
 
 ## Users
 
-They Paycheck Splitter is intended for any individual who earns an income and wants to automate how they divide their money across multiple accounts. No technical knowledge is required. The only skills needed are basic computer operation, using a mouse and keyboard.
+They BudgetFlow is intended for any individual who earns an income and wants to automate how they divide their money across multiple accounts. No technical knowledge is required. The only skills needed are basic computer operation, using a mouse and keyboard.
 
 ## Functional Requirements
 

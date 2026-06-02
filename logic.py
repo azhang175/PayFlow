@@ -1,8 +1,9 @@
 import json
 import os
+from decimal import Decimal, ROUND_HALF_UP
 
 app_data = os.getenv('APPDATA')
-save_dir = os.path.join(app_data, 'PaycheckSplitter')
+save_dir = os.path.join(app_data, 'BudgetFlow')
 os.makedirs(save_dir, exist_ok=True)
 save_path= os.path.join(save_dir, 'accounts.json')
 
@@ -39,18 +40,19 @@ def delete_account(name):
             return
 
 def calculate(total):
-    remaining = total
+    remaining = Decimal(str(total))
 
     for acc in accounts:
         if acc["var_type"] == "fixed":
-            acc["result"] = acc["amount"]
-            remaining = remaining - float(acc["amount"])
+            amount = Decimal(str(acc['amount']))
+            acc["result"] = amount.quantize(Decimal("0.01"))
+            remaining -= amount
 
     for acc in accounts:
         if acc["var_type"] == "percent":
-            acc_amount = remaining * float(acc["amount"]) / 100
-
-            acc["result"] = acc_amount
+            amount = Decimal(str(acc['amount']))
+            acc_amount = remaining * amount / Decimal("100")
+            acc["result"] = acc_amount.quantize(Decimal("0.01"), rounding=ROUND_HALF_UP)
 
 def validate(total):
     total_fixed = 0

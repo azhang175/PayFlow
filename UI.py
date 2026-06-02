@@ -5,7 +5,7 @@ from logic import accounts, add_account, edit_account, delete_account, calculate
 root = tk.Tk()
 
 
-root.title("Paycheck Splitter")
+root.title("BudgetFlow")
 
 #-----Top Frame-------
 def run_calculate():
@@ -146,7 +146,6 @@ def refresh_accounts():
         delete_button.grid(row=i+1, column=5)
 
 
-
 #----Top Frame----
 def open_add_account():
     top = tk.Toplevel(root)
@@ -187,8 +186,10 @@ def open_add_account():
         if not value:
             errors.append("Please enter a value.")
 
-        if not value.isdigit():
-            errors.append("The value is not a digit.")
+        try:
+            value = float(value)
+        except ValueError:
+            errors.appen("The value must be a number.")
 
         if errors:
             messagebox.showerror('Error', '\n'.join(errors))

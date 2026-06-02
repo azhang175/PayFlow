@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 ## PayFlow
+=======
+## BudgetFlow
+>>>>>>> Stashed changes
 
 A desktop application that helps you split your money across multiple accounts (no calculator needed).
 
@@ -20,7 +24,11 @@ A desktop application that helps you split your money across multiple accounts (
 ## How to Run
 
 1. Go to [Releases](https://github.com/azhang175/Paycheck_Splitter/releases/tag/v1.0.0)
+<<<<<<< Updated upstream
 2. Download the lastest 'PayFlow.exe'
+=======
+2. Download the lastest 'BudgetFlow.exe'
+>>>>>>> Stashed changes
 3. Double-click to launch the app
 
 ---
