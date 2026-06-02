@@ -45,14 +45,14 @@ def calculate(total):
     for acc in accounts:
         if acc["var_type"] == "fixed":
             amount = Decimal(str(acc['amount']))
-            acc["result"] = amount.quantize(Decimal("0.01"))
+            acc["result"] = float(amount.quantize(Decimal("0.01")))
             remaining -= amount
 
     for acc in accounts:
         if acc["var_type"] == "percent":
             amount = Decimal(str(acc['amount']))
             acc_amount = remaining * amount / Decimal("100")
-            acc["result"] = acc_amount.quantize(Decimal("0.01"), rounding=ROUND_HALF_UP)
+            acc["result"] = float(acc_amount.quantize(Decimal("0.01"), rounding=ROUND_HALF_UP))
 
 def validate(total):
     total_fixed = 0
